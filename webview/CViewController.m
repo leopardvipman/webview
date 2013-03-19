@@ -18,8 +18,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    web = [[UIWebView alloc] initWithFrame:self.view.frame];
+    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://gaoluo.qingter.com/lifeng/qtadmin/sec_users/login"]];
+    [self.view addSubview: web];
+    [web loadRequest:request];
 }
-
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return (interfaceOrientation == UIDeviceOrientationLandscapeRight || interfaceOrientation==UIDeviceOrientationLandscapeLeft);
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

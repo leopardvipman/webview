@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CViewController : UIViewController
-
+{
+    UIWebView *web;
+}
 @end
